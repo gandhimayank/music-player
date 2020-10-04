@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/4c70dfc37a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <audio id="player" ontimeupdate="updateProgress()">
+        <source id="source">
+            Audio not supported
+    </audio>
+
+    <span id= "currentlyPlayingSong"></span><em><span id="currentSong"></span></em>
+    <progress id="progress" value="0" max="100"></progress>
+ 
+    <div id="controls">
+        <i id="mySvg" class="far fa-play-circle fa-5x" onclick="playAudio()"></i>
+        <i id="mySvg" class="far fa-pause-circle fa-5x" onclick="pauseAudio()"></i>
+        <p>Volume:</p>
+        <i class="fas fa-volume-down"></i>
+        <input type="range" id="volumeSlider" min="0" max="1" step="0.01">
+        <i class="fas fa-volume-up"></i>
+
+
+    </div>
+    
+    <h4>My Songs:</h4>
+    <div id="songList">
+        
+
+    </div>
+    <script src="script.js"></script>
+    
+</body>
+</html>
